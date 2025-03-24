@@ -8,7 +8,6 @@
     --text-color: #bdbcbc;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -68,18 +67,18 @@ footer {
     margin: 30px auto;
 }
 
-#acceuil, #about, #services, #compétences, #project #contact {
+#accueil, #about, #services, #compétences, #project #contact {
     padding-top: 40px;
     height: 100vh;
 }
 
-#acceuil {
+#accueil {
     display: flex;
     justify-content: space-around;
     margin-top: 15vh;
 }
 
-#acceuil img {
+#accueil img {
     border-radius: 10%;
     margin-top: -150px;
     width : 80%;
@@ -208,12 +207,17 @@ footer {
 
 
 /* MEDIA SCREEN */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .services-container .card {
         flex: 0 0 calc(50% - 50px);
     }
 
-    #project {
+    #accueil, #about {
+        margin-top: 10vh;
+        height: 50vh;
+    }
+    
+    #project, #services {
         margin-top: 70vh;
     }
     .image {
@@ -222,5 +226,57 @@ footer {
 
     .card img {
         width: 265px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    #accueil {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5vh;
+    }
+
+    .card-container .card {
+        flex: 0 0 calc(50% - 50px);
+    }
+
+    #project, #services {
+        margin-top: 120vh;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card img {
+        height: 250px;
     }
 }
